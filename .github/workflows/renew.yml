@@ -79,6 +79,7 @@ jobs:
       id: proxy
       env:
         PROXY_URL: ${{ secrets.PROXY_URL }}
+        ALLOW_INSECURE_PROXY: "1"
       run: |
         if [ -z "$PROXY_URL" ]; then
           echo "ℹ️ 未配置 PROXY_URL，跳过代理直接外连。"
